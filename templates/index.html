@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Chatbot</title>
+    <link rel="icon" type="image/png" href="../static/images/chatbot.png">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/js/index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <div class="top">
+          <div class="dot"></div>
+          <!-- <span>Demo chatbot!</span> -->
+          <h5>Demo chatbot!</h5>
+        </div>
+        <div id='chatbox' class="chat-box">
+          {% for message in all_message%}
+            {% if message.role == "bot"%}
+              <div class="message-box-left">
+                <img class="avatar" src="../static/images/chatbot.png" alt="">
+                <div class="message-left">
+                  <span style="white-space: pre-line">{{message.message}}</span>
+                </div>
+              </div>
+            {% elif message.role == "user"%}
+              <div class="message-right-container">
+                <div class="message-box-right">
+                  <span style="white-space: pre-line">{{message.message}}</span>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <form class="input-box" method="post">
+          <input id="myMessage" class="input-field" type="text" name="user_input" value="">
+          <input id="sendbutton" class="submit-button" type="submit" name="" value="SEND">
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

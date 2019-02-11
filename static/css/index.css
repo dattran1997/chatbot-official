@@ -1,0 +1,98 @@
+body{
+  margin: 0px;
+}
+span{
+  color: white;
+}
+.container{
+  width: 100%;
+  background-color: blue;
+  background-image: linear-gradient(to bottom right, #acb6e5, #86fde8);
+  display: flex;
+  justify-content: center;
+}
+.box{
+  width: 45%;
+  height: 500px;
+  background-color: green;
+  margin: 8.5% 0px;
+  border-radius: 25px;
+}
+.top{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 5%;
+  border-radius: 18px 18px 0px 0px;
+  background-color: #f5f6f7;
+}
+.dot{
+  width: 5%;
+  height: 20%;
+  margin: 0px 2%;
+  border-radius: 25px;
+  background-color: #2ef336;
+}
+.chat-box{
+  width: 100%;
+  height: 450px;
+  background-color:#d9d9d9;
+  overflow-y: scroll;
+}
+.input-box{
+  display: flex;
+  width: 100%;
+  height: 8%;
+}
+.input-field{
+  padding-left: 2%;
+  width: 80%;
+  border: none;
+  border-radius: 0px 0px 0px 18px;
+}
+
+.submit-button{
+  width: 20%;
+  border-radius: 0px 0px 18px 0px;
+  border: none;
+  cursor: pointer;
+  color: blue;
+}
+.submit-button:hover{
+  background-color: #dfdfdf;
+}
+.submit-button:active{
+  background-color: white;
+  color: #16a4f8;
+}
+.message-box-left{
+  display: flex;
+  align-items: center;
+  padding: 1%;
+  padding-left: 2%
+}
+.avatar{
+  width: 8%;
+  height:auto;
+  margin-right: 3%;
+  border-radius: 25px;
+  margin-bottom: 8%;
+}
+.message-left{
+  max-width: 60%;
+  background-color: #0c7fef;
+  padding: 1.5%;
+  border-radius: 18px;
+}
+.message-right-container{
+  display: flex;
+  justify-content: flex-end;
+  padding: 2%;
+}
+.message-box-right{
+  max-width: 60%;
+  float: right;
+  padding: 1.5%;
+  background-color: #EE2A29;
+  border-radius: 18px;
+}

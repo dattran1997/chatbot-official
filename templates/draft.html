@@ -1,0 +1,29 @@
+{% for message in all_message%}
+  {% if message.role == "bot"%}
+    <div class="message-box-left">
+      <img class="avatar" src="../static/images/chatbot.png" alt="">
+      <div class="message-left">
+        <span>{{message.message}}</span>
+      </div>
+    </div>
+  {% elif message.role == "user"%}
+    <div class="message-right-container">
+      <div class="message-box-right">
+          <span>{{message.message}}</span>
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
+
+<div id='box-left' class="message-box-left">
+  <img class="avatar" src="../static/images/chatbot.png" alt="">
+  <div class="message-left">
+    <span id='left-message'></span>
+  </div>
+</div>
+
+<div class="message-right-container">
+  <div class="message-box-right">
+    <span id='right-message'></span>
+  </div>
+</div>
